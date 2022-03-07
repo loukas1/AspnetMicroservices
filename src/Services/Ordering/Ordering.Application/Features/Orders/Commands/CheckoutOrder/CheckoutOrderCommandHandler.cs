@@ -32,6 +32,7 @@ namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
         public async Task<int> Handle(CheckoutOrderCommand request, CancellationToken cancellationToken)
         {
             var orderEntity = _mapper.Map<Order>(request);
+            orderEntity.LastModifiedBy = request.UserName;
             var newOrder = await _orderRepository.AddAsync(orderEntity);
 
             _logger.LogInformation($"Order {newOrder.Id} is successfully created.");
