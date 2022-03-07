@@ -19,7 +19,7 @@ namespace Ordering.Infrastructure.Persistence
         {
             return new List<Order>
             {
-                new Order() {UserName = "swn", FirstName = "Mehmet", LastName = "Ozkaya", EmailAddress = "ezozkme@gmail.com", AddressLine = "Bahcelievler", Country = "Turkey", TotalPrice = 350 }
+                new Order() {UserName = "swn", FirstName = "Mehmet", LastName = "Ozkaya", EmailAddress = "ezozkme@gmail.com", AddressLine = "Bahcelievler", Country = "Turkey", TotalPrice = 350, CVV="123", CardName="Loukas L", CardNumber="444333222111",Expiration="09/26",LastModifiedBy="swn",CreatedBy="swn",CreatedDate=Convert.ToDateTime("2022-02-28"),PaymentMethod=1,State="Athens",ZipCode="15543"}
             };
         }
     }
